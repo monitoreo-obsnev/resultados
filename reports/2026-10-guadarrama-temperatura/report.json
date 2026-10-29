@@ -1,0 +1,290 @@
+{
+ "schema": 1,
+ "id": "2026-10-guadarrama-temperatura",
+ "title": "¿Se está calentando la superficie del parque en verano? ¿Dónde hace más calor?",
+ "question": null,
+ "summary": "No hay tendencia significativa entre 2001 y 2024 (p = 0,96); 2003 y 2022 fueron los veranos más cálidos. El mapa a 30 m localiza las zonas más calientes.",
+ "answer": "La temperatura de la superficie en verano no muestra tendencia entre 2001 y 2024: domina la variación entre años, con 2003 (31,3 °C) y 2022 (30,5 °C) como los veranos más cálidos y 2014 (27,2 °C) como el más fresco.\n\nEl mapa de Landsat del verano de 2023 baja a 30 m y muestra unos 16 °C de diferencia dentro del parque (de 24 a 40 °C entre los percentiles 2 y 98). Permite localizar las zonas más expuestas al calor, algo imposible con píxeles de 1 km.",
+ "method": "Datos: temperatura de superficie de MODIS Terra (1 km, a media mañana), de junio a agosto de 2001 a 2024, y de Landsat 8 y 9 (30 m), del verano de 2023. Herramientas MCP: trend_table, time_series y download_image; 1,8 minutos de cálculo en Google Earth Engine.\n\nTendencia con el test de Mann-Kendall (significativa si p < 0,05) y la pendiente de Sen de la temperatura media del parque de junio a agosto de cada año. Filtros por píxel de MonitorEO: nubes y sombras, agua, nieve y aerosoles.",
+ "sections": [
+  {
+   "title": "Frente a REMOTE",
+   "text": "REMOTE no incluye la temperatura de superficie. MonitorEO la calcula con MODIS (diaria, desde 2000) y con Landsat (30 m, desde 1984), y lo mismo hace con la evapotranspiración, el albedo, la nieve o los índices de agua."
+  },
+  {
+   "title": "Petición al asistente de IA",
+   "text": "«¿Ha aumentado la temperatura de superficie en verano en el Parque Nacional de la Sierra de Guadarrama desde 2001? Descarga también el mapa de Landsat del verano de 2023.»"
+  }
+ ],
+ "region": {
+  "name": "Sierra de Guadarrama",
+  "full_name": "Parque Nacional de la Sierra de Guadarrama",
+  "designation": "Parque Nacional",
+  "area_km2": 340,
+  "wdpa_id": 555546231,
+  "bounds": [
+   -4.143749,
+   40.735238,
+   -3.726846,
+   41.039061
+  ]
+ },
+ "variables": [
+  {
+   "variable": "LST",
+   "sensor": "Landsat",
+   "name": "Temperatura Superficial",
+   "unit": "°C"
+  },
+  {
+   "variable": "LST",
+   "sensor": "MODIS",
+   "name": "Temperatura Superficial",
+   "unit": "°C"
+  }
+ ],
+ "analyses": [
+  {
+   "id": "map",
+   "name": "Mapa"
+  },
+  {
+   "id": "series",
+   "name": "Serie temporal"
+  },
+  {
+   "id": "trend",
+   "name": "Tendencia"
+  }
+ ],
+ "periods": [
+  [
+   "2001-01-01",
+   "2024-12-31"
+  ],
+  [
+   "2023-06-01",
+   "2023-08-31"
+  ]
+ ],
+ "years": [
+  2001,
+  2024
+ ],
+ "published": "2026-10-29",
+ "authors": [
+  "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+  "Universidad de Granada"
+ ],
+ "collection": "Red de Parques Nacionales, octubre de 2026",
+ "keywords": [
+  "Red de Parques Nacionales",
+  "REMOTE"
+ ],
+ "license": {
+  "id": "CC-BY-4.0",
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+  "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+ },
+ "thumbnail": "thumbnail.png",
+ "results": [
+  {
+   "id": "r1",
+   "kind": "map",
+   "title": "Temperatura de superficie media del verano de 2023 (Landsat 8 y 9, 30 m)",
+   "caption": null,
+   "tool": "download_image",
+   "cog": "maps/LST_Landsat_mean_2023-06-01_2023-08-31.tif",
+   "nodata": -9999,
+   "bands": [
+    {
+     "name": "value",
+     "label": "Temperatura Superficial",
+     "unit": "°C",
+     "legend": {
+      "type": "continuous",
+      "min": 24.566341400146484,
+      "max": 38.349884033203125,
+      "palette": [
+       "#053061",
+       "#2166ac",
+       "#4393c3",
+       "#92c5de",
+       "#d1e5f0",
+       "#f7f7f7",
+       "#fddbc7",
+       "#f4a582",
+       "#d6604d",
+       "#b2182b",
+       "#67001f"
+      ]
+     },
+     "stats": {
+      "min": 21.18552589416504,
+      "max": 47.36233901977539,
+      "p2": 23.843452529907225,
+      "p98": 39.980472564697266,
+      "mean": 30.876077908150297,
+      "count": 382508
+     }
+    }
+   ],
+   "band": "value",
+   "significance": null,
+   "images": 48,
+   "call": {
+    "tool": "download_image",
+    "args": {
+     "region": {
+      "wdpa_id": 555546231
+     },
+     "variable": "LST",
+     "sensor": "Landsat",
+     "start": "2023-06-01",
+     "end": "2023-08-31",
+     "metric": "mean"
+    },
+    "python": "mo.download_image(region={\"wdpa_id\": 555546231}, variable=\"LST\", sensor=\"Landsat\", start=\"2023-06-01\", end=\"2023-08-31\", metric=\"mean\")"
+   },
+   "crs": "EPSG:32630",
+   "proj4": "+proj=utm +zone=30 +datum=WGS84 +units=m +no_defs",
+   "extent": [
+    403860.0,
+    4509990.0,
+    438630.0,
+    4543350.0
+   ],
+   "bounds": [
+    -4.143749,
+    40.735238,
+    -3.726846,
+    41.039061
+   ],
+   "size": [
+    1159,
+    1112
+   ],
+   "resolution": 30.0
+  },
+  {
+   "id": "r2",
+   "kind": "chart",
+   "chart": "series",
+   "title": "Temperatura de superficie media de junio a agosto, 2001-2024 (MODIS)",
+   "caption": "Media del parque de junio a agosto de cada año y recta de Sen (+0,04 °C por década, p = 0,96, sin tendencia significativa).",
+   "tool": "time_series",
+   "csv": "data/LST_Modis_annual_mean_2001-01-01_2024-12-31.csv",
+   "png": "files/LST_Modis_annual_mean_2001-01-01_2024-12-31.png",
+   "unit": "°C",
+   "step": "annual",
+   "call": {
+    "tool": "time_series",
+    "args": {
+     "region": {
+      "wdpa_id": 555546231
+     },
+     "variable": "LST",
+     "sensor": "Modis",
+     "start": "2001-01-01",
+     "end": "2024-12-31",
+     "step": "annual",
+     "season": [
+      "06-01",
+      "08-31"
+     ]
+    },
+    "python": "mo.time_series(region={\"wdpa_id\": 555546231}, variable=\"LST\", sensor=\"Modis\", start=\"2001-01-01\", end=\"2024-12-31\", step=\"annual\", season=[\"06-01\", \"08-31\"])"
+   },
+   "sen": [
+    {
+     "region": "Sierra de Guadarrama",
+     "trend": "r3",
+     "start": "2001-01-01",
+     "end": "2024-12-31",
+     "period": "2001-2024",
+     "origin": 2001,
+     "from": 2001,
+     "to": 2024,
+     "slope": 0.0038937439577402594,
+     "intercept": 29.098860823902484,
+     "p_value": 0.9604341290900433,
+     "significant": false
+    }
+   ]
+  },
+  {
+   "id": "r3",
+   "kind": "chart",
+   "chart": "trends",
+   "title": "Tendencia de la temperatura de superficie de verano, 2001-2024",
+   "caption": null,
+   "tool": "trend_table",
+   "csv": "data/trend_LST_Modis_annual_2001-01-01_2024-12-31.csv",
+   "png": "files/trend_LST_Modis_annual_2001-01-01_2024-12-31.png",
+   "unit": "°C",
+   "step": "annual",
+   "call": {
+    "tool": "trend_table",
+    "args": {
+     "region": {
+      "wdpa_id": 555546231
+     },
+     "variable": "LST",
+     "sensor": "Modis",
+     "start": "2001-01-01",
+     "end": "2024-12-31",
+     "step": "annual",
+     "season": [
+      "06-01",
+      "08-31"
+     ]
+    },
+    "python": "mo.trend_table(region={\"wdpa_id\": 555546231}, variable=\"LST\", sensor=\"Modis\", start=\"2001-01-01\", end=\"2024-12-31\", step=\"annual\", season=[\"06-01\", \"08-31\"])"
+   },
+   "slope_unit": "°C/año",
+   "alpha": 0.05
+  }
+ ],
+ "files": [
+  {
+   "path": "maps/LST_Landsat_mean_2023-06-01_2023-08-31.tif",
+   "title": "Mapa (GeoTIFF): Temperatura de superficie media del verano de 2023 (Landsat 8 y 9, 30 m)",
+   "type": "GeoTIFF",
+   "bytes": 1524503
+  },
+  {
+   "path": "data/LST_Modis_annual_mean_2001-01-01_2024-12-31.csv",
+   "title": "Tabla (CSV): Temperatura de superficie media de junio a agosto, 2001-2024 (MODIS)",
+   "type": "CSV",
+   "bytes": 2451
+  },
+  {
+   "path": "files/LST_Modis_annual_mean_2001-01-01_2024-12-31.png",
+   "title": "Gráfico (PNG): Temperatura de superficie media de junio a agosto, 2001-2024 (MODIS)",
+   "type": "PNG",
+   "bytes": 75346
+  },
+  {
+   "path": "data/trend_LST_Modis_annual_2001-01-01_2024-12-31.csv",
+   "title": "Tabla (CSV): Tendencia de la temperatura de superficie de verano, 2001-2024",
+   "type": "CSV",
+   "bytes": 345
+  },
+  {
+   "path": "files/trend_LST_Modis_annual_2001-01-01_2024-12-31.png",
+   "title": "Gráfico (PNG): Tendencia de la temperatura de superficie de verano, 2001-2024",
+   "type": "PNG",
+   "bytes": 23453
+  },
+  {
+   "path": "files/informe.pdf",
+   "title": "Informe «MonitorEO para el seguimiento de la Red de Parques Nacionales» (PDF, 12 páginas)",
+   "type": "PDF",
+   "bytes": 1903093
+  }
+ ],
+ "software": {
+  "monitoreo": "0.3.5"
+ }
+}

@@ -1,0 +1,25 @@
+region,date,value,n_pixels,n_images,variable,sensor,step,metric,stat,unit,scale_m
+Sierra de Guadarrama,2001-06-01,29.145931492259376,473,75,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2002-06-01,28.23015664320298,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2003-06-01,31.282395501628177,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2004-06-01,28.932519643812363,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2005-06-01,29.943178868337007,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2006-06-01,29.280936554684086,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2007-06-01,27.29551020829934,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2008-06-01,27.658063214308537,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2009-06-01,30.032085249826707,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2010-06-01,28.911918973785486,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2011-06-01,27.87623294695105,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2012-06-01,29.20088892662957,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2013-06-01,29.098515083038475,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2014-06-01,27.172514430941487,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2015-06-01,30.200278577734366,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2016-06-01,28.89194676324072,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2017-06-01,29.80176439335645,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2018-06-01,28.659440876881604,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2019-06-01,29.34774830031984,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2020-06-01,29.396784881417553,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2021-06-01,27.964111681282183,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2022-06-01,30.53969861947286,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2023-06-01,29.405158953972123,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0
+Sierra de Guadarrama,2024-06-01,27.409625363897938,473,92,LST,Modis,annual,mean,mean,[ºC],1000.0

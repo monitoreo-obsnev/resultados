@@ -1,0 +1,520 @@
+{
+ "schema": 1,
+ "title": "Resultados de MonitorEO-OBSNEV",
+ "updated": "2026-10-29T07:26:54",
+ "software": {
+  "monitoreo": "0.3.5"
+ },
+ "about": {
+  "name": "MonitorEO-OBSNEV",
+  "description": "MonitorEO-OBSNEV es una herramienta abierta de monitorización de Variables Esenciales de la Biodiversidad basada en sensores satelitales y modelos generados por la Universidad de Granada. Permite a la ciudadanía, gestores y científicos crear mapas y gráficos de métricas clave de los ecosistemas para apoyar la toma de decisiones.",
+  "acknowledgements": "MonitorEO es un resultado del Proyecto EVEREST (PID2023-151939OB-I00), financiado por MICIU/AEI 10.13039/501100011033 y cofinanciado por FEDER – Unión Europea, y del Proyecto NevadEO (C-EXP-074-UGR23), cofinanciado por el Programa FEDER 2014-2020 y la Consejería de Economía, Conocimiento, Empresa y Universidades de la Junta de Andalucía.",
+  "logos": [
+   "assets/logos/monitoreo_obsnev.png",
+   "assets/logos/nevadeo_feder.jpg"
+  ],
+  "app": "https://ee-ugr-default-project.projects.earthengine.app/view/monitoreo-obsnev",
+  "manual": "https://github.com/monitoreo-obsnev/monitoreo/wiki",
+  "repository": "https://github.com/monitoreo-obsnev/monitoreo"
+ },
+ "license": {
+  "id": "CC-BY-4.0",
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+  "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+ },
+ "analyses": {
+  "series": "Serie temporal",
+  "trend": "Tendencia",
+  "comparison": "Comparación de periodos",
+  "burn_severity": "Severidad de incendio",
+  "map": "Mapa"
+ },
+ "reports": [
+  {
+   "id": "2026-10-aiguestortes-nieve",
+   "title": "¿En qué meses se está perdiendo la nieve?",
+   "question": null,
+   "summary": "El descenso es significativo en abril (−5,8 puntos por década, p = 0,047). Mayo y noviembre bajan más, pero con tanta variación entre años que aún no es significativo.",
+   "region": {
+    "name": "Aigüestortes i Estany de Sant Maurici",
+    "full_name": "Parque Nacional de Aigüestortes i Estany de Sant Maurici",
+    "designation": "Parque Nacional",
+    "area_km2": 139,
+    "wdpa_id": 196014
+   },
+   "variables": [
+    {
+     "variable": "NDSI",
+     "sensor": "MODIS",
+     "name": "Índice de Nieve de Diferencia Normalizada",
+     "unit": ""
+    }
+   ],
+   "analyses": [
+    {
+     "id": "trend",
+     "name": "Tendencia"
+    },
+    {
+     "id": "series",
+     "name": "Serie temporal"
+    }
+   ],
+   "periods": [
+    [
+     "2001-01-01",
+     "2024-12-31"
+    ]
+   ],
+   "years": [
+    2001,
+    2024
+   ],
+   "published": "2026-10-29",
+   "authors": [
+    "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+    "Universidad de Granada"
+   ],
+   "collection": "Red de Parques Nacionales, octubre de 2026",
+   "keywords": [
+    "Red de Parques Nacionales",
+    "REMOTE"
+   ],
+   "license": {
+    "id": "CC-BY-4.0",
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+    "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+   },
+   "path": "reports/2026-10-aiguestortes-nieve/report.json",
+   "thumbnail": "reports/2026-10-aiguestortes-nieve/thumbnail.png",
+   "maps": 0,
+   "charts": 2
+  },
+  {
+   "id": "2026-10-ordesa-vegetacion",
+   "title": "¿Cómo ha cambiado la vegetación en 40 años?",
+   "question": null,
+   "summary": "El NDVI de verano sube en el 83 % del parque. La tendencia es significativa incluso solo con Landsat 5 y 7 (1985-2011), lo que descarta que se deba al cambio de satélite.",
+   "region": {
+    "name": "Ordesa y Monte Perdido",
+    "full_name": "Parque Nacional de Ordesa y Monte Perdido",
+    "designation": "Parque Nacional",
+    "area_km2": 157,
+    "wdpa_id": 893,
+    "bounds": [
+     -0.107269,
+     42.509954,
+     0.155968,
+     42.705966
+    ]
+   },
+   "variables": [
+    {
+     "variable": "NDVI",
+     "sensor": "Landsat",
+     "name": "Índice de Vegetación de Diferencia Normalizada",
+     "unit": ""
+    }
+   ],
+   "analyses": [
+    {
+     "id": "trend",
+     "name": "Tendencia"
+    },
+    {
+     "id": "series",
+     "name": "Serie temporal"
+    }
+   ],
+   "periods": [
+    [
+     "1985-01-01",
+     "2011-12-31"
+    ],
+    [
+     "1985-01-01",
+     "2024-12-31"
+    ],
+    [
+     "2013-01-01",
+     "2024-12-31"
+    ]
+   ],
+   "years": [
+    1985,
+    2024
+   ],
+   "published": "2026-10-29",
+   "authors": [
+    "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+    "Universidad de Granada"
+   ],
+   "collection": "Red de Parques Nacionales, octubre de 2026",
+   "keywords": [
+    "Red de Parques Nacionales",
+    "REMOTE"
+   ],
+   "license": {
+    "id": "CC-BY-4.0",
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+    "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+   },
+   "path": "reports/2026-10-ordesa-vegetacion/report.json",
+   "thumbnail": "reports/2026-10-ordesa-vegetacion/thumbnail.png",
+   "maps": 1,
+   "charts": 4
+  },
+  {
+   "id": "2026-10-picos-de-europa-nieve",
+   "title": "¿Tiene hoy el parque menos nieve que a comienzos de siglo?",
+   "question": null,
+   "summary": "Sí, de noviembre a mayo: −14 puntos de índice de nieve en marzo y −13 en noviembre (2020-2024 frente a 2001-2005), sobre todo en los tres macizos.",
+   "region": {
+    "name": "Picos de Europa",
+    "full_name": "Parque Nacional de los Picos de Europa",
+    "designation": "Parque Nacional",
+    "area_km2": 660,
+    "wdpa_id": 71213,
+    "bounds": [
+     -5.127219,
+     43.067599,
+     -4.609165,
+     43.323433
+    ]
+   },
+   "variables": [
+    {
+     "variable": "NDSI",
+     "sensor": "MODIS",
+     "name": "Índice de Nieve de Diferencia Normalizada",
+     "unit": ""
+    }
+   ],
+   "analyses": [
+    {
+     "id": "comparison",
+     "name": "Comparación de periodos"
+    }
+   ],
+   "periods": [
+    [
+     "2001-01-01",
+     "2005-12-31"
+    ],
+    [
+     "2020-01-01",
+     "2024-12-31"
+    ]
+   ],
+   "years": [
+    2001,
+    2024
+   ],
+   "published": "2026-10-29",
+   "authors": [
+    "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+    "Universidad de Granada"
+   ],
+   "collection": "Red de Parques Nacionales, octubre de 2026",
+   "keywords": [
+    "Red de Parques Nacionales",
+    "REMOTE"
+   ],
+   "license": {
+    "id": "CC-BY-4.0",
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+    "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+   },
+   "path": "reports/2026-10-picos-de-europa-nieve/report.json",
+   "thumbnail": "reports/2026-10-picos-de-europa-nieve/thumbnail.png",
+   "maps": 1,
+   "charts": 1
+  },
+  {
+   "id": "2026-10-guadarrama-temperatura",
+   "title": "¿Se está calentando la superficie del parque en verano? ¿Dónde hace más calor?",
+   "question": null,
+   "summary": "No hay tendencia significativa entre 2001 y 2024 (p = 0,96); 2003 y 2022 fueron los veranos más cálidos. El mapa a 30 m localiza las zonas más calientes.",
+   "region": {
+    "name": "Sierra de Guadarrama",
+    "full_name": "Parque Nacional de la Sierra de Guadarrama",
+    "designation": "Parque Nacional",
+    "area_km2": 340,
+    "wdpa_id": 555546231,
+    "bounds": [
+     -4.143749,
+     40.735238,
+     -3.726846,
+     41.039061
+    ]
+   },
+   "variables": [
+    {
+     "variable": "LST",
+     "sensor": "Landsat",
+     "name": "Temperatura Superficial",
+     "unit": "°C"
+    },
+    {
+     "variable": "LST",
+     "sensor": "MODIS",
+     "name": "Temperatura Superficial",
+     "unit": "°C"
+    }
+   ],
+   "analyses": [
+    {
+     "id": "map",
+     "name": "Mapa"
+    },
+    {
+     "id": "series",
+     "name": "Serie temporal"
+    },
+    {
+     "id": "trend",
+     "name": "Tendencia"
+    }
+   ],
+   "periods": [
+    [
+     "2001-01-01",
+     "2024-12-31"
+    ],
+    [
+     "2023-06-01",
+     "2023-08-31"
+    ]
+   ],
+   "years": [
+    2001,
+    2024
+   ],
+   "published": "2026-10-29",
+   "authors": [
+    "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+    "Universidad de Granada"
+   ],
+   "collection": "Red de Parques Nacionales, octubre de 2026",
+   "keywords": [
+    "Red de Parques Nacionales",
+    "REMOTE"
+   ],
+   "license": {
+    "id": "CC-BY-4.0",
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+    "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+   },
+   "path": "reports/2026-10-guadarrama-temperatura/report.json",
+   "thumbnail": "reports/2026-10-guadarrama-temperatura/thumbnail.png",
+   "maps": 1,
+   "charts": 2
+  },
+  {
+   "id": "2026-10-sierra-de-las-nieves-sequia",
+   "title": "¿Cuánto verdor perdió el parque en la sequía de 2023?",
+   "question": null,
+   "summary": "Algo menos de verdor en mayo (−0,05) y octubre (−0,06) que en 2018-2021; en verano la pérdida media es pequeña (−0,015) y se localiza en la mitad sur.",
+   "region": {
+    "name": "Sierra de las Nieves",
+    "full_name": "Parque Nacional de la Sierra de las Nieves",
+    "designation": "Parque Nacional",
+    "area_km2": 230,
+    "wdpa_id": 555700945,
+    "bounds": [
+     -5.088378,
+     36.553329,
+     -4.875198,
+     36.80057
+    ]
+   },
+   "variables": [
+    {
+     "variable": "NDVI",
+     "sensor": "Sentinel-2",
+     "name": "Índice de Vegetación de Diferencia Normalizada",
+     "unit": ""
+    }
+   ],
+   "analyses": [
+    {
+     "id": "comparison",
+     "name": "Comparación de periodos"
+    }
+   ],
+   "periods": [
+    [
+     "2018-01-01",
+     "2021-12-31"
+    ],
+    [
+     "2023-01-01",
+     "2023-12-31"
+    ]
+   ],
+   "years": [
+    2018,
+    2023
+   ],
+   "published": "2026-10-29",
+   "authors": [
+    "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+    "Universidad de Granada"
+   ],
+   "collection": "Red de Parques Nacionales, octubre de 2026",
+   "keywords": [
+    "Red de Parques Nacionales",
+    "REMOTE"
+   ],
+   "license": {
+    "id": "CC-BY-4.0",
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+    "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+   },
+   "path": "reports/2026-10-sierra-de-las-nieves-sequia/report.json",
+   "thumbnail": "reports/2026-10-sierra-de-las-nieves-sequia/thumbnail.png",
+   "maps": 1,
+   "charts": 1
+  },
+  {
+   "id": "2026-10-sierra-nevada-verdor",
+   "title": "¿En qué época del año ha cambiado el verdor desde 2001, y dónde?",
+   "question": null,
+   "summary": "Solo septiembre tiene una tendencia significativa del EVI (+0,008 por década, p = 0,015). El verdor anual aumenta en el 30 % del parque y disminuye en el 3 %.",
+   "region": {
+    "name": "Sierra Nevada",
+    "full_name": "Parque Nacional de Sierra Nevada",
+    "designation": "Parque Nacional",
+    "area_km2": 859,
+    "wdpa_id": 389011,
+    "bounds": [
+     -3.549425,
+     36.939041,
+     -2.661888,
+     37.212939
+    ]
+   },
+   "variables": [
+    {
+     "variable": "EVI",
+     "sensor": "MODIS",
+     "name": "Índice de Vegetación Mejorado",
+     "unit": ""
+    }
+   ],
+   "analyses": [
+    {
+     "id": "trend",
+     "name": "Tendencia"
+    },
+    {
+     "id": "series",
+     "name": "Serie temporal"
+    }
+   ],
+   "periods": [
+    [
+     "2001-01-01",
+     "2024-12-31"
+    ]
+   ],
+   "years": [
+    2001,
+    2024
+   ],
+   "published": "2026-10-29",
+   "authors": [
+    "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+    "Universidad de Granada"
+   ],
+   "collection": "Red de Parques Nacionales, octubre de 2026",
+   "keywords": [
+    "Red de Parques Nacionales",
+    "REMOTE"
+   ],
+   "license": {
+    "id": "CC-BY-4.0",
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+    "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+   },
+   "path": "reports/2026-10-sierra-nevada-verdor/report.json",
+   "thumbnail": "reports/2026-10-sierra-nevada-verdor/thumbnail.png",
+   "maps": 1,
+   "charts": 2
+  },
+  {
+   "id": "2026-10-teide-incendio",
+   "title": "¿Qué parte del parque quemó el incendio de agosto de 2023, y con qué severidad?",
+   "question": null,
+   "summary": "956 ha quemadas en el borde nororiental según el dNBR y la escala del USGS: 559 de severidad baja, 318 moderada-baja y 79 moderada-alta.",
+   "region": {
+    "name": "Teide",
+    "full_name": "Parque Nacional del Teide",
+    "designation": "Parque Nacional",
+    "area_km2": 188,
+    "wdpa_id": 389013,
+    "bounds": [
+     -16.731392,
+     28.188829,
+     -16.479614,
+     28.344075
+    ]
+   },
+   "variables": [
+    {
+     "variable": "NBR",
+     "sensor": "Sentinel-2",
+     "name": "Índice Normalizado de Quema",
+     "unit": ""
+    }
+   ],
+   "analyses": [
+    {
+     "id": "burn_severity",
+     "name": "Severidad de incendio"
+    }
+   ],
+   "periods": [
+    [
+     "2023-05-15",
+     "2023-08-14"
+    ],
+    [
+     "2023-09-15",
+     "2023-11-30"
+    ]
+   ],
+   "years": [
+    2023,
+    2023
+   ],
+   "published": "2026-10-29",
+   "authors": [
+    "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+    "Universidad de Granada"
+   ],
+   "collection": "Red de Parques Nacionales, octubre de 2026",
+   "keywords": [
+    "Red de Parques Nacionales",
+    "REMOTE"
+   ],
+   "license": {
+    "id": "CC-BY-4.0",
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+    "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+   },
+   "path": "reports/2026-10-teide-incendio/report.json",
+   "thumbnail": "reports/2026-10-teide-incendio/thumbnail.png",
+   "maps": 1,
+   "charts": 1
+  }
+ ]
+}

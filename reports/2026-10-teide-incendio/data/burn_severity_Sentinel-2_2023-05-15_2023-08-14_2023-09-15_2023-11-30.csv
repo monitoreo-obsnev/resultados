@@ -1,0 +1,8 @@
+region,class,label,dnbr_min,dnbr_max,ha,sensor,before,after,metric,scale_m
+El Teide,-2,Rebrote alto,,-0.25,5.857578231006696,Sentinel-2,2023-05-15/2023-08-14,2023-09-15/2023-11-30,median,10.0
+El Teide,-1,Rebrote bajo,-0.25,-0.1,525.7863883203884,Sentinel-2,2023-05-15/2023-08-14,2023-09-15/2023-11-30,median,10.0
+El Teide,0,No quemado,-0.1,0.1,17204.36127228931,Sentinel-2,2023-05-15/2023-08-14,2023-09-15/2023-11-30,median,10.0
+El Teide,1,Severidad baja,0.1,0.27,558.9691401549035,Sentinel-2,2023-05-15/2023-08-14,2023-09-15/2023-11-30,median,10.0
+El Teide,2,Severidad moderada-baja,0.27,0.44,317.8702139795729,Sentinel-2,2023-05-15/2023-08-14,2023-09-15/2023-11-30,median,10.0
+El Teide,3,Severidad moderada-alta,0.44,0.66,79.32100089545729,Sentinel-2,2023-05-15/2023-08-14,2023-09-15/2023-11-30,median,10.0
+El Teide,4,Severidad alta,0.66,,0.2576727945215562,Sentinel-2,2023-05-15/2023-08-14,2023-09-15/2023-11-30,median,10.0

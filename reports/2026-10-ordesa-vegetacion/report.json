@@ -1,0 +1,541 @@
+{
+ "schema": 1,
+ "id": "2026-10-ordesa-vegetacion",
+ "title": "¿Cómo ha cambiado la vegetación en 40 años?",
+ "question": null,
+ "summary": "El NDVI de verano sube en el 83 % del parque. La tendencia es significativa incluso solo con Landsat 5 y 7 (1985-2011), lo que descarta que se deba al cambio de satélite.",
+ "answer": "El NDVI de verano del parque ha pasado de 0,45 a 0,58 según la recta de Sen, y la tendencia es positiva y significativa en el 83 % del parque (unas 12.600 ha); apenas hay descensos (0,3 %).\n\nPara comprobar que no se debe al cambio de satélite, la tendencia se repitió por generaciones de Landsat. Con Landsat 5 y 7 (1985-2011) sigue siendo significativa (+0,023 por década, p = 0,017); con Landsat 8 y 9 (2013-2024) no lo es. Parte del salto de 2013 se debe, por tanto, al cambio de sensor, cuyo NDVI no está armonizado con el de Landsat 5 y 7. La pendiente de 1985-2011 es la estimación prudente del aumento.",
+ "method": "Datos: NDVI de Landsat 5, 7, 8 y 9 (30 m), julio y agosto de 1985 a 2024 (2012 no tiene imágenes). Herramientas MCP: trend_table (tres periodos), download_trend y time_series; 2,6 minutos de cálculo en Google Earth Engine.\n\nTendencia con el test de Mann-Kendall (significativa si p < 0,05) y la pendiente de Sen del NDVI medio de julio y agosto de cada año, para el parque y en cada píxel. Filtros por píxel de MonitorEO: nubes y sombras (banda de calidad de Landsat), agua, nieve y aerosoles.",
+ "sections": [
+  {
+   "title": "Frente a REMOTE",
+   "text": "Es el producto principal de REMOTE: la tendencia de Landsat desde 1984. MonitorEO lo reproduce con el p-valor de cada píxel y permite, en segundos, cambiar el periodo, la temporada o la zona para comprobar si una tendencia es robusta, algo que un mapa precalculado no permite."
+  },
+  {
+   "title": "Petición al asistente de IA",
+   "text": "«Calcula la tendencia del NDVI de julio y agosto con Landsat de 1985 a 2024 en el Parque Nacional de Ordesa y Monte Perdido, y repítela solo con Landsat 5 y 7.»"
+  }
+ ],
+ "region": {
+  "name": "Ordesa y Monte Perdido",
+  "full_name": "Parque Nacional de Ordesa y Monte Perdido",
+  "designation": "Parque Nacional",
+  "area_km2": 157,
+  "wdpa_id": 893,
+  "bounds": [
+   -0.107269,
+   42.509954,
+   0.155968,
+   42.705966
+  ]
+ },
+ "variables": [
+  {
+   "variable": "NDVI",
+   "sensor": "Landsat",
+   "name": "Índice de Vegetación de Diferencia Normalizada",
+   "unit": ""
+  }
+ ],
+ "analyses": [
+  {
+   "id": "trend",
+   "name": "Tendencia"
+  },
+  {
+   "id": "series",
+   "name": "Serie temporal"
+  }
+ ],
+ "periods": [
+  [
+   "1985-01-01",
+   "2011-12-31"
+  ],
+  [
+   "1985-01-01",
+   "2024-12-31"
+  ],
+  [
+   "2013-01-01",
+   "2024-12-31"
+  ]
+ ],
+ "years": [
+  1985,
+  2024
+ ],
+ "published": "2026-10-29",
+ "authors": [
+  "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+  "Universidad de Granada"
+ ],
+ "collection": "Red de Parques Nacionales, octubre de 2026",
+ "keywords": [
+  "Red de Parques Nacionales",
+  "REMOTE"
+ ],
+ "license": {
+  "id": "CC-BY-4.0",
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+  "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+ },
+ "thumbnail": "thumbnail.png",
+ "results": [
+  {
+   "id": "r1",
+   "kind": "map",
+   "title": "Tendencia del NDVI de julio y agosto en cada píxel, 1985-2024",
+   "caption": "Pendiente de Sen en cada píxel de 30 m; en gris, los píxeles sin tendencia significativa (p ≥ 0,05).",
+   "tool": "download_trend",
+   "cog": "maps/trend_NDVI_Landsat_annual_None_1985-01-01_2024-12-31.tif",
+   "nodata": -9999,
+   "bands": [
+    {
+     "name": "slope",
+     "label": "Pendiente de Sen",
+     "unit": "por año",
+     "legend": {
+      "type": "continuous",
+      "min": -0.0058313230983912945,
+      "max": 0.0058313230983912945,
+      "palette": [
+       "#8c510a",
+       "#bf812d",
+       "#dfc27d",
+       "#f2efe6",
+       "#80cdc1",
+       "#35978f",
+       "#01665e"
+      ]
+     },
+     "stats": {
+      "min": -0.071730837225914,
+      "max": 0.17411792278289795,
+      "p2": -0.0009344881982542574,
+      "p98": 0.007085741506889462,
+      "mean": 0.002815753219003799,
+      "count": 168792
+     }
+    },
+    {
+     "name": "tau",
+     "label": "τ de Kendall",
+     "unit": "",
+     "legend": {
+      "type": "continuous",
+      "min": -1.0,
+      "max": 1.0,
+      "palette": [
+       "#8c510a",
+       "#bf812d",
+       "#dfc27d",
+       "#f2efe6",
+       "#80cdc1",
+       "#35978f",
+       "#01665e"
+      ]
+     },
+     "stats": {
+      "min": -1.0,
+      "max": 1.0,
+      "p2": -0.3333333432674408,
+      "p98": 0.7860962748527527,
+      "mean": 0.4414044991520469,
+      "count": 168792
+     }
+    },
+    {
+     "name": "z",
+     "label": "Z de Mann-Kendall",
+     "unit": "",
+     "legend": {
+      "type": "continuous",
+      "min": -6.211441516876221,
+      "max": 6.211441516876221,
+      "palette": [
+       "#8c510a",
+       "#bf812d",
+       "#dfc27d",
+       "#f2efe6",
+       "#80cdc1",
+       "#35978f",
+       "#01665e"
+      ]
+     },
+     "stats": {
+      "min": -4.076722145080566,
+      "max": 7.664224147796631,
+      "p2": -1.0,
+      "p98": 6.211441516876221,
+      "mean": 3.613595483004572,
+      "count": 168792
+     }
+    },
+    {
+     "name": "p_value",
+     "label": "p-valor de Mann-Kendall",
+     "unit": "",
+     "legend": {
+      "type": "continuous",
+      "min": 0.0,
+      "max": 0.1,
+      "palette": [
+       "#0571b0",
+       "#92c5de",
+       "#f7f7f7"
+      ]
+     },
+     "stats": {
+      "min": 1.7985612998927536e-14,
+      "max": 1.0,
+      "p2": 5.250064827322376e-10,
+      "p98": 0.7142302453517906,
+      "mean": 0.0626362324562599,
+      "count": 168792
+     }
+    },
+    {
+     "name": "intercept",
+     "label": "Valor de la recta de Sen el primer año",
+     "unit": "",
+     "legend": {
+      "type": "continuous",
+      "min": 0.05075552098453045,
+      "max": 0.7911672377586364,
+      "palette": [
+       "#0000ff",
+       "#df923d",
+       "#f1b555",
+       "#fcd163",
+       "#99b718",
+       "#74a901",
+       "#66a000",
+       "#529400",
+       "#3e8601",
+       "#207401",
+       "#056201",
+       "#004c00",
+       "#023b01",
+       "#012e01",
+       "#011d01",
+       "#011301"
+      ]
+     },
+     "stats": {
+      "min": -3.418940544128418,
+      "max": 1.3259046077728271,
+      "p2": 0.05075552098453045,
+      "p98": 0.7911672377586364,
+      "mean": 0.4167294395530486,
+      "count": 168792
+     }
+    },
+    {
+     "name": "n",
+     "label": "Años con datos",
+     "unit": "años",
+     "legend": {
+      "type": "continuous",
+      "min": 2.0,
+      "max": 39.0,
+      "palette": [
+       "#fde725",
+       "#5ec962",
+       "#21918c",
+       "#3b528b",
+       "#440154"
+      ]
+     },
+     "stats": {
+      "min": 2.0,
+      "max": 39.0,
+      "p2": 3.0,
+      "p98": 38.0,
+      "mean": 31.112647518839754,
+      "count": 168792
+     }
+    }
+   ],
+   "band": "slope",
+   "significance": {
+    "band": "p_value",
+    "alpha": 0.05
+   },
+   "images": null,
+   "call": {
+    "tool": "download_trend",
+    "args": {
+     "region": {
+      "wdpa_id": 893
+     },
+     "variable": "NDVI",
+     "sensor": "Landsat",
+     "start": "1985-01-01",
+     "end": "2024-12-31",
+     "step": "annual",
+     "season": [
+      "07-01",
+      "08-31"
+     ]
+    },
+    "python": "mo.download_trend(region={\"wdpa_id\": 893}, variable=\"NDVI\", sensor=\"Landsat\", start=\"1985-01-01\", end=\"2024-12-31\", step=\"annual\", season=[\"07-01\", \"08-31\"])"
+   },
+   "crs": "EPSG:32631",
+   "proj4": "+proj=utm +zone=31 +datum=WGS84 +units=m +no_defs",
+   "extent": [
+    245490.0,
+    4711050.0,
+    266370.0,
+    4732110.0
+   ],
+   "bounds": [
+    -0.107269,
+    42.509954,
+    0.155968,
+    42.705966
+   ],
+   "size": [
+    696,
+    702
+   ],
+   "resolution": 30.0
+  },
+  {
+   "id": "r2",
+   "kind": "chart",
+   "chart": "series",
+   "title": "NDVI medio de julio y agosto del parque, 1985-2024",
+   "caption": "Media del parque en julio y agosto de cada año (2012 no tiene imágenes) y rectas de Sen de toda la serie y de cada generación de Landsat.",
+   "tool": "time_series",
+   "csv": "data/NDVI_Landsat_annual_mean_1985-01-01_2024-12-31.csv",
+   "png": "files/NDVI_Landsat_annual_mean_1985-01-01_2024-12-31.png",
+   "unit": "",
+   "step": "annual",
+   "call": {
+    "tool": "time_series",
+    "args": {
+     "region": {
+      "wdpa_id": 893
+     },
+     "variable": "NDVI",
+     "sensor": "Landsat",
+     "start": "1985-01-01",
+     "end": "2024-12-31",
+     "step": "annual",
+     "season": [
+      "07-01",
+      "08-31"
+     ]
+    },
+    "python": "mo.time_series(region={\"wdpa_id\": 893}, variable=\"NDVI\", sensor=\"Landsat\", start=\"1985-01-01\", end=\"2024-12-31\", step=\"annual\", season=[\"07-01\", \"08-31\"])"
+   },
+   "sen": [
+    {
+     "region": "Ordesa y Monte Perdido",
+     "trend": "r3",
+     "start": "1985-01-01",
+     "end": "2024-12-31",
+     "period": "1985-2024",
+     "origin": 1985,
+     "from": 1985,
+     "to": 2024,
+     "slope": 0.0032283075739017197,
+     "intercept": 0.45388275690399693,
+     "p_value": 6.417878348388607e-06,
+     "significant": true
+    },
+    {
+     "region": "Ordesa y Monte Perdido",
+     "trend": "r4",
+     "start": "1985-01-01",
+     "end": "2011-12-31",
+     "period": "1985-2011",
+     "origin": 1985,
+     "from": 1985,
+     "to": 2011,
+     "slope": 0.002255865000785743,
+     "intercept": 0.4576896652279554,
+     "p_value": 0.016512128683611137,
+     "significant": true
+    },
+    {
+     "region": "Ordesa y Monte Perdido",
+     "trend": "r5",
+     "start": "2013-01-01",
+     "end": "2024-12-31",
+     "period": "2013-2024",
+     "origin": 2013,
+     "from": 2013,
+     "to": 2024,
+     "slope": -0.0024069846941941883,
+     "intercept": 0.5851432929785809,
+     "p_value": 0.33704732652008296,
+     "significant": false
+    }
+   ]
+  },
+  {
+   "id": "r3",
+   "kind": "chart",
+   "chart": "trends",
+   "title": "Tendencia 1985-2024 (Landsat 5, 7, 8 y 9)",
+   "caption": null,
+   "tool": "trend_table",
+   "csv": "data/trend_NDVI_Landsat_annual_1985-01-01_2024-12-31.csv",
+   "png": "files/trend_NDVI_Landsat_annual_1985-01-01_2024-12-31.png",
+   "unit": "",
+   "step": "annual",
+   "call": {
+    "tool": "trend_table",
+    "args": {
+     "region": {
+      "wdpa_id": 893
+     },
+     "variable": "NDVI",
+     "sensor": "Landsat",
+     "start": "1985-01-01",
+     "end": "2024-12-31",
+     "step": "annual",
+     "season": [
+      "07-01",
+      "08-31"
+     ]
+    },
+    "python": "mo.trend_table(region={\"wdpa_id\": 893}, variable=\"NDVI\", sensor=\"Landsat\", start=\"1985-01-01\", end=\"2024-12-31\", step=\"annual\", season=[\"07-01\", \"08-31\"])"
+   },
+   "slope_unit": "por año",
+   "alpha": 0.05
+  },
+  {
+   "id": "r4",
+   "kind": "chart",
+   "chart": "trends",
+   "title": "Tendencia 1985-2011 (Landsat 5 y 7)",
+   "caption": null,
+   "tool": "trend_table",
+   "csv": "data/trend_NDVI_Landsat_annual_1985-01-01_2011-12-31.csv",
+   "png": "files/trend_NDVI_Landsat_annual_1985-01-01_2011-12-31.png",
+   "unit": "",
+   "step": "annual",
+   "call": {
+    "tool": "trend_table",
+    "args": {
+     "region": {
+      "wdpa_id": 893
+     },
+     "variable": "NDVI",
+     "sensor": "Landsat",
+     "start": "1985-01-01",
+     "end": "2011-12-31",
+     "step": "annual",
+     "season": [
+      "07-01",
+      "08-31"
+     ]
+    },
+    "python": "mo.trend_table(region={\"wdpa_id\": 893}, variable=\"NDVI\", sensor=\"Landsat\", start=\"1985-01-01\", end=\"2011-12-31\", step=\"annual\", season=[\"07-01\", \"08-31\"])"
+   },
+   "slope_unit": "por año",
+   "alpha": 0.05
+  },
+  {
+   "id": "r5",
+   "kind": "chart",
+   "chart": "trends",
+   "title": "Tendencia 2013-2024 (Landsat 8 y 9)",
+   "caption": null,
+   "tool": "trend_table",
+   "csv": "data/trend_NDVI_Landsat_annual_2013-01-01_2024-12-31.csv",
+   "png": "files/trend_NDVI_Landsat_annual_2013-01-01_2024-12-31.png",
+   "unit": "",
+   "step": "annual",
+   "call": {
+    "tool": "trend_table",
+    "args": {
+     "region": {
+      "wdpa_id": 893
+     },
+     "variable": "NDVI",
+     "sensor": "Landsat",
+     "start": "2013-01-01",
+     "end": "2024-12-31",
+     "step": "annual",
+     "season": [
+      "07-01",
+      "08-31"
+     ]
+    },
+    "python": "mo.trend_table(region={\"wdpa_id\": 893}, variable=\"NDVI\", sensor=\"Landsat\", start=\"2013-01-01\", end=\"2024-12-31\", step=\"annual\", season=[\"07-01\", \"08-31\"])"
+   },
+   "slope_unit": "por año",
+   "alpha": 0.05
+  }
+ ],
+ "files": [
+  {
+   "path": "maps/trend_NDVI_Landsat_annual_None_1985-01-01_2024-12-31.tif",
+   "title": "Mapa (GeoTIFF): Tendencia del NDVI de julio y agosto en cada píxel, 1985-2024",
+   "type": "GeoTIFF",
+   "bytes": 4269538
+  },
+  {
+   "path": "data/NDVI_Landsat_annual_mean_1985-01-01_2024-12-31.csv",
+   "title": "Tabla (CSV): NDVI medio de julio y agosto del parque, 1985-2024",
+   "type": "CSV",
+   "bytes": 4426
+  },
+  {
+   "path": "files/NDVI_Landsat_annual_mean_1985-01-01_2024-12-31.png",
+   "title": "Gráfico (PNG): NDVI medio de julio y agosto del parque, 1985-2024",
+   "type": "PNG",
+   "bytes": 76672
+  },
+  {
+   "path": "data/trend_NDVI_Landsat_annual_1985-01-01_2024-12-31.csv",
+   "title": "Tabla (CSV): Tendencia 1985-2024 (Landsat 5, 7, 8 y 9)",
+   "type": "CSV",
+   "bytes": 357
+  },
+  {
+   "path": "files/trend_NDVI_Landsat_annual_1985-01-01_2024-12-31.png",
+   "title": "Gráfico (PNG): Tendencia 1985-2024 (Landsat 5, 7, 8 y 9)",
+   "type": "PNG",
+   "bytes": 28648
+  },
+  {
+   "path": "data/trend_NDVI_Landsat_annual_1985-01-01_2011-12-31.csv",
+   "title": "Tabla (CSV): Tendencia 1985-2011 (Landsat 5 y 7)",
+   "type": "CSV",
+   "bytes": 355
+  },
+  {
+   "path": "files/trend_NDVI_Landsat_annual_1985-01-01_2011-12-31.png",
+   "title": "Gráfico (PNG): Tendencia 1985-2011 (Landsat 5 y 7)",
+   "type": "PNG",
+   "bytes": 26984
+  },
+  {
+   "path": "data/trend_NDVI_Landsat_annual_2013-01-01_2024-12-31.csv",
+   "title": "Tabla (CSV): Tendencia 2013-2024 (Landsat 8 y 9)",
+   "type": "CSV",
+   "bytes": 359
+  },
+  {
+   "path": "files/trend_NDVI_Landsat_annual_2013-01-01_2024-12-31.png",
+   "title": "Gráfico (PNG): Tendencia 2013-2024 (Landsat 8 y 9)",
+   "type": "PNG",
+   "bytes": 29106
+  },
+  {
+   "path": "files/informe.pdf",
+   "title": "Informe «MonitorEO para el seguimiento de la Red de Parques Nacionales» (PDF, 12 páginas)",
+   "type": "PDF",
+   "bytes": 1903093
+  }
+ ],
+ "software": {
+  "monitoreo": "0.3.5"
+ }
+}

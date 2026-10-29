@@ -1,0 +1,2 @@
+region,key,label,n,tau,z,p_value,significant,slope,intercept,first_year,last_year,variable,sensor,step,metric,stat,unit,slope_unit,scale_m
+Sierra de Guadarrama,all,año,24,0.007246376811594203,0.049608806013915846,0.9604341290900433,False,0.0038937439577402594,29.098860823902484,2001,2024,LST,Modis,annual,mean,mean,[ºC],[ºC] / year,1000.0

@@ -1,0 +1,2 @@
+region,key,label,n,tau,z,p_value,significant,slope,intercept,first_year,last_year,variable,sensor,step,metric,stat,unit,slope_unit,scale_m
+Ordesa y Monte Perdido,all,año,12,-0.21212121212121213,-0.9600156738532384,0.33704732652008296,False,-0.0024069846941941883,0.5851432929785809,2013,2024,NDVI,Landsat,annual,mean,mean,[unitless],[unitless] / year,30.0

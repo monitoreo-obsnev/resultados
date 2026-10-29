@@ -1,0 +1,293 @@
+{
+ "schema": 1,
+ "id": "2026-10-sierra-de-las-nieves-sequia",
+ "title": "¿Cuánto verdor perdió el parque en la sequía de 2023?",
+ "question": null,
+ "summary": "Algo menos de verdor en mayo (−0,05) y octubre (−0,06) que en 2018-2021; en verano la pérdida media es pequeña (−0,015) y se localiza en la mitad sur.",
+ "answer": "Respecto a 2018-2021, el NDVI medio de 2023 fue menor sobre todo en mayo (−0,05) y en octubre (−0,06). En agosto, con la vegetación en su mínimo anual, apenas hubo diferencia.\n\nEl mapa del verano localiza el descenso: la media del parque baja 0,015, y 111 ha (el 0,5 %) pierden más de 0,1, sobre todo en la mitad sur. Es un efecto moderado y repartido, más que una pérdida intensa en zonas concretas.",
+ "method": "Datos: NDVI de Sentinel-2, 2023 frente a 2018-2021. Herramientas MCP: compare_series y download_comparison; 5,5 minutos de cálculo en Google Earth Engine.\n\nMedia del parque del NDVI medio de cada mes en cada periodo; el mapa es la diferencia de la mediana del NDVI de junio a septiembre entre 2023 y 2018-2021, con píxeles de 20 m. Filtros por píxel de MonitorEO: nubes y sombras (Cloud Score+), agua y nieve.",
+ "sections": [
+  {
+   "title": "Frente a REMOTE",
+   "text": "REMOTE muestra la anomalía de cada fecha respecto a la media de toda la serie, que incluye los propios años secos. MonitorEO compara con el periodo de referencia que se elija (aquí, los años anteriores a la sequía), a 10 o 20 m."
+  },
+  {
+   "title": "Petición al asistente de IA",
+   "text": "«Compara el NDVI de Sentinel-2 de 2023 con el de 2018-2021 en el Parque Nacional de la Sierra de las Nieves, mes a mes, y haz el mapa de la diferencia en verano.»"
+  }
+ ],
+ "region": {
+  "name": "Sierra de las Nieves",
+  "full_name": "Parque Nacional de la Sierra de las Nieves",
+  "designation": "Parque Nacional",
+  "area_km2": 230,
+  "wdpa_id": 555700945,
+  "bounds": [
+   -5.088378,
+   36.553329,
+   -4.875198,
+   36.80057
+  ]
+ },
+ "variables": [
+  {
+   "variable": "NDVI",
+   "sensor": "Sentinel-2",
+   "name": "Índice de Vegetación de Diferencia Normalizada",
+   "unit": ""
+  }
+ ],
+ "analyses": [
+  {
+   "id": "comparison",
+   "name": "Comparación de periodos"
+  }
+ ],
+ "periods": [
+  [
+   "2018-01-01",
+   "2021-12-31"
+  ],
+  [
+   "2023-01-01",
+   "2023-12-31"
+  ]
+ ],
+ "years": [
+  2018,
+  2023
+ ],
+ "published": "2026-10-29",
+ "authors": [
+  "Observatorio de Cambio Global de Sierra Nevada (OBSNEV)",
+  "Universidad de Granada"
+ ],
+ "collection": "Red de Parques Nacionales, octubre de 2026",
+ "keywords": [
+  "Red de Parques Nacionales",
+  "REMOTE"
+ ],
+ "license": {
+  "id": "CC-BY-4.0",
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+  "text": "se pueden copiar, redistribuir y adaptar para cualquier fin, también comercial, citando la fuente."
+ },
+ "thumbnail": "thumbnail.png",
+ "results": [
+  {
+   "id": "r1",
+   "kind": "map",
+   "title": "Diferencia de la mediana del NDVI de junio a septiembre, 2023 menos 2018-2021",
+   "caption": "En marrón, menos verdor en 2023 que en 2018-2021.",
+   "tool": "download_comparison",
+   "cog": "maps/comparison_NDVI_Sentinel-2_median_2018-01-01_2021-12-31_2023-01-01_2023-12-31.tif",
+   "nodata": -9999,
+   "bands": [
+    {
+     "name": "difference",
+     "label": "Diferencia (2023 − 2018-2021)",
+     "unit": "",
+     "legend": {
+      "type": "continuous",
+      "min": -0.05555778741836548,
+      "max": 0.05555778741836548,
+      "palette": [
+       "#8c510a",
+       "#bf812d",
+       "#dfc27d",
+       "#f2efe6",
+       "#80cdc1",
+       "#35978f",
+       "#01665e"
+      ]
+     },
+     "stats": {
+      "min": -0.44755661487579346,
+      "max": 0.37012672424316406,
+      "p2": -0.07032674789428711,
+      "p98": 0.03305582523345945,
+      "mean": -0.01531138816302479,
+      "count": 578397
+     }
+    },
+    {
+     "name": "reference",
+     "label": "Referencia (2018-2021)",
+     "unit": "",
+     "legend": {
+      "type": "continuous",
+      "min": 0.15426991403102874,
+      "max": 0.8178587865829466,
+      "palette": [
+       "#0000ff",
+       "#df923d",
+       "#f1b555",
+       "#fcd163",
+       "#99b718",
+       "#74a901",
+       "#66a000",
+       "#529400",
+       "#3e8601",
+       "#207401",
+       "#056201",
+       "#004c00",
+       "#023b01",
+       "#012e01",
+       "#011d01",
+       "#011301"
+      ]
+     },
+     "stats": {
+      "min": 0.011182434856891632,
+      "max": 0.9236525893211365,
+      "p2": 0.1624135810136795,
+      "p98": 0.8178587865829466,
+      "mean": 0.509841384106552,
+      "count": 578397
+     }
+    },
+    {
+     "name": "other",
+     "label": "Otro periodo (2023)",
+     "unit": "",
+     "legend": {
+      "type": "continuous",
+      "min": 0.15426991403102874,
+      "max": 0.8178587865829466,
+      "palette": [
+       "#0000ff",
+       "#df923d",
+       "#f1b555",
+       "#fcd163",
+       "#99b718",
+       "#74a901",
+       "#66a000",
+       "#529400",
+       "#3e8601",
+       "#207401",
+       "#056201",
+       "#004c00",
+       "#023b01",
+       "#012e01",
+       "#011d01",
+       "#011301"
+      ]
+     },
+     "stats": {
+      "min": 0.013118108734488487,
+      "max": 0.9209572076797485,
+      "p2": 0.15426991403102874,
+      "p98": 0.791537675857544,
+      "mean": 0.4945299959435401,
+      "count": 578397
+     }
+    }
+   ],
+   "band": "difference",
+   "significance": null,
+   "images": null,
+   "call": {
+    "tool": "download_comparison",
+    "args": {
+     "region": {
+      "wdpa_id": 555700945
+     },
+     "variable": "NDVI",
+     "sensor": "Sentinel-2",
+     "start": "2018-01-01",
+     "end": "2021-12-31",
+     "other_start": "2023-01-01",
+     "other_end": "2023-12-31",
+     "metric": "median",
+     "season": [
+      "06-01",
+      "09-30"
+     ],
+     "resolution": 20
+    },
+    "python": "mo.download_comparison(region={\"wdpa_id\": 555700945}, variable=\"NDVI\", sensor=\"Sentinel-2\", start=\"2018-01-01\", end=\"2021-12-31\", other_start=\"2023-01-01\", other_end=\"2023-12-31\", metric=\"median\", season=[\"06-01\", \"09-30\"], resolution=20)"
+   },
+   "crs": "EPSG:32630",
+   "proj4": "+proj=utm +zone=30 +datum=WGS84 +units=m +no_defs",
+   "extent": [
+    313680.0,
+    4047340.0,
+    332180.0,
+    4074400.0
+   ],
+   "bounds": [
+    -5.088378,
+    36.553329,
+    -4.875198,
+    36.80057
+   ],
+   "size": [
+    925,
+    1353
+   ],
+   "resolution": 20.0
+  },
+  {
+   "id": "r2",
+   "kind": "chart",
+   "chart": "comparison",
+   "title": "NDVI medio de cada mes en 2018-2021 y en 2023",
+   "caption": null,
+   "tool": "compare_series",
+   "csv": "data/comparison_NDVI_Sentinel-2_2018-01-01_2021-12-31_2023-01-01_2023-12-31.csv",
+   "png": "files/comparison_NDVI_Sentinel-2_2018-01-01_2021-12-31_2023-01-01_2023-12-31.png",
+   "unit": "",
+   "step": "monthly",
+   "call": {
+    "tool": "compare_series",
+    "args": {
+     "region": {
+      "wdpa_id": 555700945
+     },
+     "variable": "NDVI",
+     "sensor": "Sentinel-2",
+     "start": "2018-01-01",
+     "end": "2021-12-31",
+     "other_start": "2023-01-01",
+     "other_end": "2023-12-31",
+     "step": "monthly"
+    },
+    "python": "mo.compare_series(region={\"wdpa_id\": 555700945}, variable=\"NDVI\", sensor=\"Sentinel-2\", start=\"2018-01-01\", end=\"2021-12-31\", other_start=\"2023-01-01\", other_end=\"2023-12-31\", step=\"monthly\")"
+   },
+   "names": [
+    "2018-2021",
+    "2023"
+   ]
+  }
+ ],
+ "files": [
+  {
+   "path": "maps/comparison_NDVI_Sentinel-2_median_2018-01-01_2021-12-31_2023-01-01_2023-12-31.tif",
+   "title": "Mapa (GeoTIFF): Diferencia de la mediana del NDVI de junio a septiembre, 2023 menos 2018-2021",
+   "type": "GeoTIFF",
+   "bytes": 7771807
+  },
+  {
+   "path": "data/comparison_NDVI_Sentinel-2_2018-01-01_2021-12-31_2023-01-01_2023-12-31.csv",
+   "title": "Tabla (CSV): NDVI medio de cada mes en 2018-2021 y en 2023",
+   "type": "CSV",
+   "bytes": 2427
+  },
+  {
+   "path": "files/comparison_NDVI_Sentinel-2_2018-01-01_2021-12-31_2023-01-01_2023-12-31.png",
+   "title": "Gráfico (PNG): NDVI medio de cada mes en 2018-2021 y en 2023",
+   "type": "PNG",
+   "bytes": 82070
+  },
+  {
+   "path": "files/informe.pdf",
+   "title": "Informe «MonitorEO para el seguimiento de la Red de Parques Nacionales» (PDF, 12 páginas)",
+   "type": "PDF",
+   "bytes": 1903093
+  }
+ ],
+ "software": {
+  "monitoreo": "0.3.5"
+ }
+}
