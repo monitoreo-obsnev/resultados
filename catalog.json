@@ -1,9 +1,9 @@
 {
  "schema": 1,
  "title": "Resultados de MonitorEO-OBSNEV",
- "updated": "2026-10-29T07:26:54",
+ "updated": "2026-10-30T17:19:16",
  "software": {
-  "monitoreo": "0.3.5"
+  "monitoreo": "0.3.6"
  },
  "about": {
   "name": "MonitorEO-OBSNEV",
@@ -13,7 +13,6 @@
    "assets/logos/monitoreo_obsnev.png",
    "assets/logos/nevadeo_feder.jpg"
   ],
-  "app": "https://ee-ugr-default-project.projects.earthengine.app/view/monitoreo-obsnev",
   "manual": "https://github.com/monitoreo-obsnev/monitoreo/wiki",
   "repository": "https://github.com/monitoreo-obsnev/monitoreo"
  },
